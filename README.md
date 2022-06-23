@@ -21,3 +21,9 @@ Replace `YOUR_PASSWORD` with `${FF14_PASSWORD}`
 DRIVER={MySQL ODBC 8.0 Unicode Driver};SERVER=127.0.0.1;PORT=3306;DATABASE=myDatabase;USER=root;PASSWORD=YOUR_PASSWORD;OPTION=3; 
 ```
 
+## To build Docker Container
+
+```
+docker build . -t ff14-stats
+
+```

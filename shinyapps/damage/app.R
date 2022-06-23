@@ -8,12 +8,12 @@ options(shiny.port = 8888)
 
 ff14_password <- Sys.getenv('FF14_PASSWORD')
 user <- 'root'
-dbname <- 'lauren'
+dbname <- 'myDatabase'
 
 con <- dbConnect(RMariaDB::MariaDB()
     , user = user
     , password = ff14_password
-    , host='127.0.0.1'
+    , host='db'
     , port='3306'
     , dbname=dbname)
 
