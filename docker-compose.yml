@@ -14,14 +14,13 @@ services:
       - FF14_PASSWORD=${FF14_PASSWORD}
       - FF14_USER=${FF14_USER}
 
-
-
   db:
     image: mysql:8
     command: --sql-mode=""
     ports:
       - "3306:3306"
     volumes:
+      - ./ffdump.sql:/docker-entrypoint-initdb.d/ffdump.sql
       - db_data:/var
     environment:
       - MYSQL_DATABASE=myDatabase
